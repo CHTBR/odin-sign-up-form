@@ -1,0 +1,152 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+h1, body {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+
+/* Variables */
+:root {
+  --primary-color: #ff2f35;
+  --side-color: #ff4566;
+  --contrast-color: #c3c7ff;
+  --side-contrast-color: #8c44ff;
+}
+
+
+/* Fonts */
+@font-face {
+    font-family: 'umbrage';
+    src: url('../assets/fonts/umbrageregular/umbrage2.woff2') format('woff2'),
+         url('../assets/fonts/umbrageregular/umbrage2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'rubik';
+  src: url('../assets/fonts/rubic/rubik-medium-webfont.woff2') format('woff2'),
+       url('../assets/fonts/rubic/rubik-medium-webfont.woff') format('woff');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rubik';
+  src: url('../assets/fonts/rubic/rubik-mediumitalic-webfont.woff2') format('woff2'),
+       url('../assets/fonts/rubic/rubik-mediumitalic-webfont.woff') format('woff');
+  font-weight: medium;
+  font-style: italic;
+}
+
+h1 {
+  font-family: 'umbrage';
+  font-weight: normal;
+  font-size: 6rem;
+  color: white;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  font-family: 'rubik';
+}
+
+
+/* Layout */
+body {
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+header {
+  width: 40vw;
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+  top: 20vh;
+}
+
+main {
+  padding-left: 5em;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+p {
+  max-width: 70ch;
+}
+
+.form-controls-highlight {
+  padding: 0 20vw 0 5rem;
+  margin: 2rem 0 2rem -5rem;
+  width: 60vw;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  column-gap: 4rem;
+}
+
+
+/* Form controls */
+/* Buttons */
+button {
+  background-color: var(--primary-color);
+  border-radius: 0.7em;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+
+button:active {
+  background-color: var(--side-contrast-color);
+}
+
+/* Text fields */
+label:has(~ input:invalid):after {
+  content: '  (required)';
+  color: var(--side-color);
+}
+
+input {
+  padding: 0.3rem;
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  border-radius: 0.5em;
+}
+
+input:invalid {
+  border: 3px solid #f00;
+}
+
+
+/* Backgrounds */
+header {
+  background-image: url('../assets/fountain.JPG');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  background-color: #0009;
+  padding: 0.1em;
+}
+
+.form-controls-highlight {
+  background-color: var(--contrast-color);
+  box-shadow: 5px 5px 5px #e0e0e0;
+}

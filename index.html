@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Odin Sign-up Form</title>
+    <link href="styles/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <h1>A form</h1>
+    </header>
+
+    <main>
+      <p>This is but a humble form. There's nothing special about it. It doesn't even send any information to a server. No purpose whatsoever. It just sits here, waiting to be filled in. So go on, don't be shy, <em>just fill it in</em>.</p>
+      <p>Or don't, it's not like I care, humpf!</p>
+      <form>
+        <div class="form-controls-highlight">
+          <p>
+            <label for="fname">First Name</label><br>
+            <input type="text" name="fname" id="fname" required>
+          </p>
+          <p>
+            <label for="lname">Last Name</label><br>
+            <input type="text" name="lname" id="lname" required>
+          </p>
+          <p>
+            <label for="mail">Email</label><br>
+            <input type="email" name="mail" id="mail" required>
+          </p>
+          <p>
+            <label for="phone">Phone Number</label><br>
+            <input type="tel" name="phone" id="phone">
+          </p>
+          <p>
+            <label for="password">Password</label><br>
+            <input type="password" name="password" id="password" required>
+          </p>
+          <p>
+            <label for="password-confirm">Confirm Password</label><br>
+            <input type="password" name="password-confirm" id="password-confirm" required>
+          </p>
+        </div>
+        <button type="submit">Create Account</button>
+      </form>
+      <p>Already have an account? <a href="#">Log in</a></p>
+    </main>
+
+  </body>
+</html>
