@@ -7,6 +7,11 @@
     <link href="styles/styles.css" rel="stylesheet">
   </head>
   <body>
+    <div class="styles-switch"
+             onclick="body.classList.toggle('dark-theme')">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </div>
 
     <header>
       <h1>A form</h1>
@@ -48,4 +53,8 @@
     </main>
 
   </body>
+
+  <script>
+    let body = document.body;
+  </script>
 </html>

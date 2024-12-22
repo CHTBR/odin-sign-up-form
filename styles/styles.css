@@ -161,3 +161,44 @@ h1 {
   background-color: var(--side-contrast-color);
   box-shadow: 5px 5px 5px #e0e0e0;
 }
+
+/* Styles switch */
+body {
+  .styles-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .styles-switch input {
+    appearance: none;
+    width: 60px;
+    height: 30px;
+    border: 3px solid;
+    border-radius: 20px;
+    border-color: black;
+  }
+
+  .styles-switch span {
+    background-color: white;
+    border-radius: 100px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 8px;
+    background-color: black;
+    left: 10px;
+  }
+}
+
+body[class="dark-theme"] {
+  .styles-switch input {
+    border-color: white;
+  }
+
+  .styles-switch span {
+    left: 38px;
+    background-color: white;
+  }
+}
+
