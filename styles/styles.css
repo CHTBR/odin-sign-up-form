@@ -15,11 +15,22 @@ button {
 
 
 /* Variables */
-:root {
+body {
   --primary-color: #ff2f35;
   --side-color: #ff4566;
-  --contrast-color: #c3c7ff;
-  --side-contrast-color: #8c44ff;
+  --contrast-color: #8c44ff;
+  --side-contrast-color: #c3c7ff;
+  --gradient-color: white;
+}
+
+body.dark-theme {
+  background-color: #06092d;
+  color: white;
+  --primary-color: #8c44ff;
+  --side-color: #c3c7ff;
+  --contrast-color: #ff2f35;
+  --side-contrast-color: #ff4566;
+  --gradient-color: #06092d;
 }
 
 
@@ -130,13 +141,13 @@ input {
 }
 
 input:invalid {
-  border: 3px solid #f00;
+  border: 3px solid var(--primary-color);
 }
 
 
 /* Backgrounds */
 header {
-  background-image: url('../assets/fountain.JPG');
+  background-image: linear-gradient(90deg, #0000 75%, var(--gradient-color) 100%), url('../assets/fountain.JPG');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -147,6 +158,6 @@ h1 {
 }
 
 .form-controls-highlight {
-  background-color: var(--contrast-color);
+  background-color: var(--side-contrast-color);
   box-shadow: 5px 5px 5px #e0e0e0;
 }
